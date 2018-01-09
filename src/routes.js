@@ -9,6 +9,9 @@ routes.get('/profile/:username', (req, res) => {
     .then(response => {
       res.send(response)
     })
+    .catch(error => {
+      res.send(error)
+    })
 })
 
 // Get collection by username - takes the SWGOH username string as a parameter
@@ -17,13 +20,19 @@ routes.get('/collection/:username', (req, res) => {
     .then(response => {
       res.send(response)
     })
+    .catch(error => {
+      res.send(error)
+    })
 })
 
 // Get guild units using guild ID
-routes.get('/units/', (req, res) => {
-  swgoh.units(req.query.guildID)
+routes.get('/units/:guildID', (req, res) => {
+  swgoh.units(req.params.guildID)
     .then(response => {
       res.send(response)
+    })
+    .catch(error => {
+      res.send(error)
     })
 })
 
@@ -33,12 +42,18 @@ routes.get('/mods/:username', (req, res) => {
     .then(response => {
       res.send(response)
     })
+    .catch(error => {
+      res.send(error)
+    })
 })
 
 routes.get('/guild/', (req, res) => {
   swgoh.guild(req.query.guildID)
     .then(response => {
       res.send(response)
+    })
+    .catch(error => {
+      res.send(error)
     })
 })
 
