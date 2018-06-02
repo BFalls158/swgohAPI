@@ -42,9 +42,11 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
+    "pg": "^7.4.3",
     "pug": "^2.0.0-beta11",
     "rimraf": "^2.6.2",
-    "swgoh": "^0.3.2"
+    "sequelize": "^4.37.10",
+    "swgoh": "^0.4.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
