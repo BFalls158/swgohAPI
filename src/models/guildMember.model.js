@@ -5,9 +5,16 @@ export default function (sequelize, DataTypes) {
         gameUserName: DataTypes.STRING
     })
 
-    // User.associate = function(models) {
-    //     models.User.belongsTo(models.User)
-    // }
+    guildMember.associate = function(models) {
+        models.GuildMember.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: true
+            }
+        })
+        models.GuildMember.hasMany(models.Character)
+        models.GuildMember.hasMany(models.Mod)
+        models.GuildMember.hasMany(models.Ship)
+    }
 
     return guildMember
 }

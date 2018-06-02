@@ -12,8 +12,10 @@ export default function (sequelize, DataTypes) {
         maxGalacticPower: DataTypes.INTEGER
     })
 
-    // User.associate = function(models) {
-    //     models.User.belongsTo(models.User)
-    // }
+    Character.associate = function(models) {
+        models.Character.belongsTo(models.GuildMember)
+        models.Character.hasMany(models.Mod)
+    }
+
     return Character
 }

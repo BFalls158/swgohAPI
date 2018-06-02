@@ -66,4 +66,14 @@ routes.get('/guild/', (req, res) => {
   })
 })
 
+routes.get('/ships/:userName', (req, res) => {
+  swgoh.ship(req.params.userName)
+    .then(response => {
+      res.send(response)
+    })
+    .catch(error => {
+      res.send(error)
+    })
+})
+
 export default routes

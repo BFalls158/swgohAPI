@@ -30,9 +30,10 @@ export default function (sequelize, DataTypes) {
         guildUrl: DataTypes.STRING
     })
 
-    // Profile.associate = function(models) {
-    //     models.Profile.belongsTo(models.User)
-    // }
+    Profile.associate = function(models) {
+        models.Profile.belongsTo(models.User)
+        models.Profile.belongsTo(models.GuildMember)
+    }
 
     return Profile
 }

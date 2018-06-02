@@ -17,9 +17,10 @@ export default function (sequelize, DataTypes) {
         secondaryFourValue: DataTypes.STRING
     })
 
-    // Mod.associate = function(models) {
-    //     models.Mod.belongsTo(models.Mod)
-    // }
+    Mod.associate = function(models) {
+        models.Mod.belongsTo(models.Character)
+        models.Mod.belongsTo(models.GuildMember)
+    }
 
     return Mod
 }

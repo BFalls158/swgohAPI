@@ -7,9 +7,10 @@ export default function (sequelize, DataTypes) {
         admin: DataTypes.BOOLEAN
     })
 
-    // User.associate = function(models) {
-    //     models.User.belongsTo(models.User)
-    // }
+    User.associate = function(models) {
+        models.User.hasOne(models.Profile)
+        models.User.hasOne(models.GuildMember)
+    }
 
     return User
 }
