@@ -53,7 +53,8 @@ routes.get('/mods/:username', (req, res) => {
       res.send(error)
     })
 })
- // hard-coded to get list of guild members, using my username
+
+ // Hard-coded to get list of guild members, using my username
 routes.get('/guild/', (req, res) => {
   swgoh.profile('cath').then(p => {
     swgoh.guild(p.guildUrl)
@@ -66,6 +67,7 @@ routes.get('/guild/', (req, res) => {
   })
 })
 
+// Get ships for a user by name
 routes.get('/ships/:userName', (req, res) => {
   swgoh.ship(req.params.userName)
     .then(response => {

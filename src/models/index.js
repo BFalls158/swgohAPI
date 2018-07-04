@@ -1,11 +1,12 @@
 import Sequelize from 'sequelize'
 import path from 'path'
 import fs from 'fs'
+import config from '../config'
 const basename = path.basename(__filename)
 let db = {}
 
-const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USER, process.env.DB_PASS, {
-    host: process.env.DB_HOST,
+const sequelize = new Sequelize(config.dbDatabase, config.dbUser, config.dbPass, {
+    host: config.dbHost,
     dialect: 'postgres',
     pool: {
         max: 5,
