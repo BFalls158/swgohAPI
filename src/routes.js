@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { swgoh } from 'swgoh'
-
+import models from './models/index'
 
 const user = {
   username: 'Cath',
