@@ -42,10 +42,10 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
-    "pg": "^7.4.3",
+    "pg": "^8.4.0",
     "pug": "^2.0.0-beta11",
     "rimraf": "^2.6.2",
-    "sequelize": "^4.37.10",
+    "sequelize": "^6.1.0",
     "swgoh": "^0.4.1"
   },
   "devDependencies": {
